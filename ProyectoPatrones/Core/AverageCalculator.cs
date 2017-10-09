@@ -10,13 +10,12 @@ namespace Core
     {
         public double CalculateMean(List<double> data)
         {
-            var rtnList = new List<double>();
 
-            var noElements = rtnList.Count;
-            var sum = rtnList.Sum(x => Convert.ToInt32(x)));
+            double noElements = data.Count;
+            double sum = data.Sum();
+            double resultado = sum / noElements;
 
-
-            return rtnList;
+            return resultado;
         }
     }
 }

@@ -8,9 +8,16 @@ namespace Core
 {
     internal class StandardDeviationCalculator : IMeanCalculator
     {
-        public double CalculateMean(List<double> data)
+        public double CalculateMean(List<double> values)
         {
-            throw new NotImplementedException();
+            double ret = 0;
+            if (values.Count() > 0)
+            {  
+                double avg = values.Average();
+                double sum = values.Sum(d => Math.Pow(d - avg, 2)); 
+                ret = Math.Sqrt((sum) / (values.Count() - 1));
+            }
+            return ret;
         }
     }
 }

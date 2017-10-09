@@ -14,7 +14,7 @@ namespace Core
 
             for (int i = 0; i < 50; i++)
             {
-                //
+                rtnList.Add(i*i+i+4);
             }
             return rtnList;
         }
